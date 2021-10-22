@@ -1,0 +1,15 @@
+
+<app-todo-add-item
+  (addItemMessage)="onItemMessage($event)"
+  (addItem)="onAddItem($event)"
+  (filterTaskItem)="onFilterItem($event)"
+></app-todo-add-item>
+
+<div class="container">
+    <app-todo-message [message]="alert"></app-todo-message>
+    <app-todo-tasks
+      (deleteItemMessage)="onItemMessage($event)"
+      (itemStatusChangeMessage)="onItemMessage($event)"
+      [tasks]="items"
+    ></app-todo-tasks>
+</div>

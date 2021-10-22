@@ -1,0 +1,36 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Task Name</th>
+    <th>Task Status</th>
+    <th>Action</th>
+
+  </tr>
+    <tr *ngFor="let task of tasks" [class.table-dark]="task.done">
+      <td>
+        <div [hidden]="!task.done" [class.strike]="task.done">
+          {{ task.label }}
+        </div>
+        <div [hidden]="task.done">
+          <a [routerLink]="['/todo/task', task.id]">{{ task.label }}</a>
+        </div>
+      </td>
+      <td>
+        <div
+          (click)="onStatuChange(task)"
+          style="text-decoration-line: underline; cursor: pointer;"
+        >
+          {{ task.done ? "Done" : "Not Done" }}
+        </div>
+      </td>
+      <td>
+        <button
+          (click)="onDelete(task)"
+          class="btn btn-outline-dark my-2 my-sm-0"
+          type="submit"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+  
