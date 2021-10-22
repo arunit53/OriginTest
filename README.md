@@ -1,3 +1,7 @@
+# Followed Sandbox pattern
+# Have used NgRX Store
+# Have user smart components and dumb components
+
 # Angular Technical Test
 We've designed a small remote technical test, that is open ended. You should be able to make choices and assumptions without guidance. We're interested in seeing how you think and architect out the code. You should not spend more than 3 hours on this so think strategically about what you want to show.
 
